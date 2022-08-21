@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:http/http.dart';
+
 
 import '../model/modelclass.dart';
 
 class ApiServices {
-  String endpoint = 'http://api.rjwada.com/items/inventory';
+  String endpoint = '';
   Dio _dio = Dio();
   Future<ItemsInventory> getUsers() async {
     var response = await _dio.get(endpoint);
